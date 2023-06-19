@@ -43,7 +43,7 @@ def predict():
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
     dpf = st.number_input("Data Reading from the Devics:")
-    st.markdown('Number of consideration time periods in the plot (read from device)')
+    st.markdown('Number of time periods consideration in the plot (read from device)')
 
 
     age = st.number_input("Age:")
@@ -57,23 +57,23 @@ def predict():
     if submit:
         prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
         if prediction == 0:
-            st.write('Congratulation!','DNA', name,'You are not diabetic')
+            st.write('Congratulation!','DNA', name,'It seems you are not a risky case')
         else:
-            st.write('DNA', name,", we are really sorry to say but it seems like you are Diabetic. But don't lose hope, we strongly recommnd visit a especialist doctor")
+            st.write('DNA', name,", we are really sorry to say but it seems like you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
           ##  st.markdown('[Visit Here](https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/in-depth/diabetes-prevention/art-20047639#:~:text=Diabetes%20prevention%3A%205%20tips%20for%20taking%20control%201,Skip%20fad%20diets%20and%20make%20healthier%20choices%20)')
 
 
 def main():
-    new_title = '<p style="font-size: 42px;">Welcome The Diabetes Prediction App!</p>'
+    new_title = '<p style="font-size: 42px;">Welcome The Congenital Disabilities Prediction App!</p>'
     read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
     read_me = st.markdown("""
     The application is built using Streamlit  
-    to demonstrate Diabetes Prediction. It performs prediction on multiple parameters
-    [here](https://github.com/).""")
+    to demonstrate Congenital Disabilities Prediction. It performs prediction on multiple parameters
+##    [here](https://github.com/).""")
     st.sidebar.title("Select Activity")
     choice = st.sidebar.selectbox(
-        "MODE", ("About", "Predict Diabetes"))
-    if choice == "Predict Diabetes":
+        "MODE", ("About", "Predict Congenital Disabilities"))
+    if choice == "Predict Congenital Disabilities":
         read_me_0.empty()
         read_me.empty()
         predict()

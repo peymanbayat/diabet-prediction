@@ -57,9 +57,9 @@ def predict():
     if submit:
         prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
         if prediction == 0:
-            st.write('Congratulation!','DNA', name,'It seems you are not a risky case')
+            st.write('Congratulation!', name,'It seems you are not a risky case')
         else:
-            st.write('DNA', name,", we are really sorry to say but it seems like you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
+            st.write(name,", we are really sorry to say but it seems like you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
           ##  st.markdown('[Visit Here](https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/in-depth/diabetes-prevention/art-20047639#:~:text=Diabetes%20prevention%3A%205%20tips%20for%20taking%20control%201,Skip%20fad%20diets%20and%20make%20healthier%20choices%20)')
 
 

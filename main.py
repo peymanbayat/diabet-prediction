@@ -59,13 +59,13 @@ def predict():
         if prediction == 0:
             st.write('Congratulation!', name,'It seems you are not a risky case')
         else:
-            st.write(name,", we are really sorry to say but it seems like you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
+            st.write(name,", It seems like you are in risk. But don't lose hope, we strongly recommnd visit a especialist doctor")
 
 
 def main():
     new_title = '<p style="font-size: 42px;">Welcome The Congenital Disabilities Prediction App!</p>'
-  ##  read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
-  ##  read_me = st.markdown("""
+    read_me_0 = st.markdown(new_title, unsafe_allow_html=True)
+    read_me = st.markdown("""
     The application is built using Streamlit  
     to demonstrate Congenital Disabilities Prediction. It performs prediction on multiple parameters
 

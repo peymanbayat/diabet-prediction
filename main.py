@@ -68,7 +68,7 @@ def main():
     read_me = st.markdown("""
     The application is built using Streamlit  
     to demonstrate Congenital Disabilities Prediction. It performs prediction on multiple parameters
-   """)
+                                  """)
     st.sidebar.title("Select Activity")
     choice = st.sidebar.selectbox(
         "MODE", ("About", "Predict Congenital Disabilities"))

@@ -15,14 +15,14 @@ pickle_in = open('Diabetes.pkl', 'rb')
 classifier = pickle.load(pickle_in)
 
 def predict():
-    st.sidebar.header('Diabetes Prediction')
+    st.sidebar.header('Birth Genomics Co.')
     # select = st.sidebar.selectbox('Select Form', ['Form 1'], key='1')
     # if not st.sidebar.checkbox("Hide", True, key='2'):
-    st.title('Diabetes Prediction(Only for Females Above 21 Years of Age)')
+    st.title('Congenital Disabilities Prediction (Only for Females Above 19 Years of Age)')
     st.markdown('This trained dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.')
     st.markdown('Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.')
 
-    name = st.text_input("Name:")
+    name = st.text_input("DNA Sequence:")
     pregnancy = st.number_input("No. of times pregnant:")
     st.markdown('Pregnancies: Number of times pregnant')
 
@@ -42,8 +42,8 @@ def predict():
     bmi = st.number_input("Body mass index (weight in kg/(height in m)^2):")
     st.markdown('BMI: Body mass index (weight in kg/(height in m)^2)')
 
-    dpf = st.number_input("Diabetes Pedigree Function:")
-    st.markdown('DiabetesPedigreeFunction: Diabetes pedigree function')
+    dpf = st.number_input("Data Reading from the Devics:")
+    st.markdown('Number of consideration time periods in the plot (read from device)')
 
 
     age = st.number_input("Age:")
@@ -57,10 +57,10 @@ def predict():
     if submit:
         prediction = classifier.predict([[pregnancy, glucose, bp, skin, insulin, bmi, dpf, age]])
         if prediction == 0:
-            st.write('Congratulation!',name,'You are not diabetic')
+            st.write('Congratulation!','DNA', name,'You are not diabetic')
         else:
-            st.write(name,", we are really sorry to say but it seems like you are Diabetic. But don't lose hope, we have suggestions for you:")
-            st.markdown('[Visit Here](https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/in-depth/diabetes-prevention/art-20047639#:~:text=Diabetes%20prevention%3A%205%20tips%20for%20taking%20control%201,Skip%20fad%20diets%20and%20make%20healthier%20choices%20)')
+            st.write('DNA', name,", we are really sorry to say but it seems like you are Diabetic. But don't lose hope, we strongly recommnd visit a especialist doctor")
+          ##  st.markdown('[Visit Here](https://www.mayoclinic.org/diseases-conditions/type-2-diabetes/in-depth/diabetes-prevention/art-20047639#:~:text=Diabetes%20prevention%3A%205%20tips%20for%20taking%20control%201,Skip%20fad%20diets%20and%20make%20healthier%20choices%20)')
 
 
 def main():

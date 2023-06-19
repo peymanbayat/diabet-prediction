@@ -19,8 +19,8 @@ def predict():
     # select = st.sidebar.selectbox('Select Form', ['Form 1'], key='1')
     # if not st.sidebar.checkbox("Hide", True, key='2'):
     st.title('Congenital Disabilities Prediction (Only for Females Above 19 Years of Age)')
-    st.markdown('This trained dataset is originally from the National Institute of Diabetes and Digestive and Kidney Diseases. The objective is to predict based on diagnostic measurements whether a patient has diabetes.')
-    st.markdown('Several constraints were placed on the selection of these instances from a larger database. In particular, all patients here are females at least 21 years old of Pima Indian heritage.')
+    st.markdown('This trained dataset is originally collected by BirthGenomics Company.')
+    st.markdown('We will be very greatful if you share your data in this regard with us.')
 
     name = st.text_input("DNA Sequence:")
     pregnancy = st.number_input("No. of times pregnant:")
